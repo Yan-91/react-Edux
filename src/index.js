@@ -6,10 +6,11 @@ import Cadastro from './pages/cadastro';
 import reportWebVitals from './reportWebVitals';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Login from './pages/login';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Cadastro />
+    <Login />
   </React.StrictMode>,
   document.getElementById('root')
 );
