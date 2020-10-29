@@ -6,7 +6,7 @@ const HeaderAluno = () => {
   return(
     <Navbar bg="success" variant="dark">
       <Navbar.Brand href="#home">
-        <img src={logo} alt='EDUX' style={{ width : '60px'}}/>
+        <img src={logo} alt='EDUX' style={{ width : '47px'}}/>
       </Navbar.Brand>
       <Nav className="mr-auto">
         <Nav.Link href="/home">Home</Nav.Link>

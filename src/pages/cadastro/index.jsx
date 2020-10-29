@@ -9,7 +9,7 @@ const Cadastro = () => {
         <div>
             <HeaderAluno />
             <Container>
-            <Form>
+            <Form className='form-signin'>
             <Form.Group controlId="formBasicName">
                     <Form.Label>Nome</Form.Label>
                     <Form.Control type="name" placeholder="Nome completo" />
