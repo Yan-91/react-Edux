@@ -6,22 +6,11 @@ import Cadastro from './pages/cadastro';
 import reportWebVitals from './reportWebVitals';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-const routing = (
-  <Router>
-    <Switch>
-      <Route path='/' component ={Home} />
-      <Route path='/' component ={Cadastro} />
-      <Route path='/' component ={Home} />
-      <Route path='/' component ={Home} />
-    </Switch> 
-  </Router>
-);
 
 ReactDOM.render(
   <React.StrictMode>
-    <Cadastro />
+    <Login />
   </React.StrictMode>,
   document.getElementById('root')
 );
