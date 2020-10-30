@@ -3,7 +3,7 @@ import  HeaderAluno  from '../../components/headeraluno';
 import  FooterAluno  from '../../components/footeraluno';
 import {  Container, Form, Button } from 'react-bootstrap';
 const Login = () => {
-
+import './index.css';
 
 
 return (
