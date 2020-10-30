@@ -15,9 +15,8 @@ const HeaderAluno = () => {
       </Nav>
       <Nav>
         <Nav.Link href="login">Login</Nav.Link>
-        <Nav.Link href="#features">Cadastro</Nav.Link>
+        <Nav.Link href="cadastro">Cadastro</Nav.Link>
       </Nav>
-     
   </Navbar>
   )
 
