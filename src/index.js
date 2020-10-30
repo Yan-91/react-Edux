@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Home from './pages/menu';
 import Cadastro from './pages/cadastro';
-import Login from './pages/login';
+import Login from './pages/login'
 import reportWebVitals from './reportWebVitals';
 
 import 'bootstrap/dist/css/bootstrap.min.css';

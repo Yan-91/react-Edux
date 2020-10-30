@@ -1,8 +1,9 @@
 import React from 'react';
 import  HeaderAluno  from '../../components/headeraluno';
 import  FooterAluno  from '../../components/footeraluno';
-import { Container, Form, Button } from 'react-bootstrap';
+import {  Container, Form, Button } from 'react-bootstrap';
 import './index.css';
+
 
 const Login = () => {
     return (
@@ -16,7 +17,7 @@ const Login = () => {
               <Form.Text className="text-muted">
               </Form.Text>
             </Form.Group>
-
+            
             <Form.Group controlId="formBasicPassword">
               <Form.Label>Senha</Form.Label>
               <Form.Control type="password" placeholder="Senha" />
@@ -31,7 +32,7 @@ const Login = () => {
             </Button>
           </Form>
          </Container>
-         < FooterAluno/>
+        < FooterAluno/>
     </div>
 )
 }
