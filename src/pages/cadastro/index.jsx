@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Form, Button, Image } from 'react-bootstrap';
+import { Container, Form, Button } from 'react-bootstrap';
 import FooterAluno from '../../components/footeraluno';
 import HeaderAluno from '../../components/headeraluno';
 import './index.css';
