@@ -17,9 +17,7 @@ const HeaderAluno = () => {
         <Nav.Link href="login">Login</Nav.Link>
         <Nav.Link href="#features">Cadastro</Nav.Link>
       </Nav>
-      <Form inline>
-        <Button bg='light' variant="dark">Search</Button>
-      </Form>
+     
   </Navbar>
   )
 
