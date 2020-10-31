@@ -25,8 +25,8 @@ const Home = () => {
                         <Col></Col>
                         </Row>
                         <Carousel.Caption>
-                            <h3>First slide label</h3>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            <h4>Conheça a plataforma Edux</h4>
+                            <Button variant="success">Saiba mais</Button>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
@@ -41,8 +41,8 @@ const Home = () => {
                         <Col></Col>
                         </Row>
                         <Carousel.Caption>
-                            <h3>Second slide label</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <h4>Cumpra objetivos para ganhar pontos</h4>
+                            <Button variant="success">Objetivos</Button>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
@@ -57,23 +57,49 @@ const Home = () => {
                         <Col></Col>
                         </Row>
                         <Carousel.Caption>
-                            <h3>Third slide label</h3>
-                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                            <h4>Faça parte de turmas</h4>
+                            <Button variant="success">Turmas</Button>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
             </Container>
         </Jumbotron>
         <Container>
+        <Row>
+        <Col>
         <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="holder.js/100px180" />
             <Card.Body>
-                <Card.Title>Card Title</Card.Title>
+                <Card.Title>Objetivo</Card.Title>
                 <Card.Text>
+                    Descrição objetivo
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <Button variant="primary">Dicas</Button>
             </Card.Body>
         </Card>
+        </Col>
+        <Col>
+        <Card style={{ width: '18rem' }}>
+            <Card.Body>
+                <Card.Title>Objetivo</Card.Title>
+                <Card.Text>
+                    Descrição objetivo
+                </Card.Text>
+                <Button variant="primary">Dicas</Button>
+            </Card.Body>
+        </Card>
+        </Col>
+        <Col>
+        <Card style={{ width: '18rem' }}>
+            <Card.Body>
+                <Card.Title>Objetivo</Card.Title>
+                <Card.Text>
+                    Descrição objetivo
+                </Card.Text>
+                <Button variant="primary">Dicas</Button>
+            </Card.Body>
+        </Card>
+        </Col>
+        </Row>
         </Container>
         <FooterAluno />
         </div>
