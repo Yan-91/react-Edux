@@ -4,11 +4,13 @@ import './index.css';
 import Home from './pages/menu';
 import Cadastro from './pages/cadastro';
 import Login from './pages/login'
+import naoEncontrada from './pages/naoEncontrada'
 import reportWebVitals from './reportWebVitals';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Switch from 'react-bootstrap/esm/Switch';
+import NaoEncotrada from './pages/naoEncontrada';
 
 const routing = (
   <Router>
@@ -17,6 +19,8 @@ const routing = (
       <Route path='/home' component={Home}/>
       <Route path='/login' component={Login}/>
       <Route path='/cadastro' component={Cadastro}/>
+      <Route path='/ranking' component={NaoEncotrada}/>
+      <Route path='/conquistas' component={NaoEncotrada}/>
     </Switch>
   </Router>
 )
