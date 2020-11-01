@@ -4,7 +4,6 @@ import  FooterAluno  from '../../components/footeraluno';
 import {  Container, Form, Button } from 'react-bootstrap';
 import './index.css';
 
-
 const Login = () => {
     return (
       <div>

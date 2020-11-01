@@ -4,13 +4,14 @@ import './index.css';
 import Home from './pages/menu';
 import Cadastro from './pages/cadastro';
 import Login from './pages/login'
-import naoEncontrada from './pages/naoEncontrada'
 import reportWebVitals from './reportWebVitals';
+import NaoEncotrada from './pages/naoEncontrada';
+import Ranking from './pages/ranking';
+import Objetivos from './pages/objetivo';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Switch from 'react-bootstrap/esm/Switch';
-import NaoEncotrada from './pages/naoEncontrada';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 
 const routing = (
   <Router>
@@ -19,8 +20,10 @@ const routing = (
       <Route path='/home' component={Home}/>
       <Route path='/login' component={Login}/>
       <Route path='/cadastro' component={Cadastro}/>
-      <Route path='/ranking' component={NaoEncotrada}/>
+      <Route path='/ranking' component={Ranking}/>
       <Route path='/conquistas' component={NaoEncotrada}/>
+      <Route path='/objetivos' component={Objetivos}/>
+      <Route path='/turmas' component={NaoEncotrada}/>
     </Switch>
   </Router>
 )

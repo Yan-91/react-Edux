@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Nav , Form, Button} from 'react-bootstrap';
+import { Navbar, Nav} from 'react-bootstrap';
 import logo from '../../assets/img/logo_branco_2-8.png'
 
 const HeaderAluno = () => {
