@@ -1,5 +1,5 @@
 import React from 'react';
-import { Carousel, Jumbotron, Container, Row, Col, Image, Card, Button } from 'react-bootstrap';
+import { Carousel, Jumbotron, Container, Row, Col, Image, Card, Button, Nav } from 'react-bootstrap';
 import FooterAluno from '../../components/footeraluno';
 import HeaderAluno from '../../components/headeraluno';
 import foto1 from '../../assets/img/escola.jpg';
@@ -26,7 +26,9 @@ const Home = () => {
                         </Row>
                         <Carousel.Caption>
                             <h4>Conheça a plataforma Edux</h4>
-                            <Button variant="success">Saiba mais</Button>
+                            <Button variant="success">Saiba mais
+                            <Nav.Link href="/saibaMais" ></Nav.Link>
+                            </Button>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
@@ -42,7 +44,9 @@ const Home = () => {
                         </Row>
                         <Carousel.Caption>
                             <h4>Cumpra objetivos para ganhar pontos</h4>
-                            <Button variant="success">Objetivos</Button>
+                            <Button variant="success" > Objetivo 
+                            <Nav.Link href="/objetivos" ></Nav.Link>
+                            </Button>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
@@ -58,7 +62,9 @@ const Home = () => {
                         </Row>
                         <Carousel.Caption>
                             <h4>Faça parte de turmas</h4>
-                            <Button variant="success">Turmas</Button>
+                            <Button variant="success">Turmas
+                            <Nav.Link href="/turmas" ></Nav.Link>
+                            </Button>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
