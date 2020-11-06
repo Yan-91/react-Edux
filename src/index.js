@@ -4,6 +4,7 @@ import './index.css';
 import Home from './pages/menu';
 import Cadastro from './pages/cadastro';
 import Login from './pages/login'
+import CrudTurma from './pages/turmas';
 import reportWebVitals from './reportWebVitals';
 import NaoEncotrada from './pages/naoEncontrada';
 import Ranking from './pages/ranking';
@@ -23,7 +24,7 @@ const routing = (
       <Route path='/ranking' component={Ranking}/>
       <Route path='/conquistas' component={NaoEncotrada}/>
       <Route path='/objetivos' component={Objetivos}/>
-      <Route path='/turmas' component={NaoEncotrada}/>
+      <Route path='/turmas' component={CrudTurma}/>
     </Switch>
   </Router>
 )
