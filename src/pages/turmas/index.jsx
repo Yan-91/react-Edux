@@ -2,6 +2,7 @@ import React, { useEffect, useStates } from 'react';
 import FooterAluno from '../../components/footeraluno/index';
 import HeaderAluno from '../../components/headeraluno/index';
 import { Jumbotron, Button, Table, Form } from 'react-bootstrap';
+import {url} from '../../utils/constants';
 
 const CrudTurma = () => {
 
@@ -18,7 +19,7 @@ const CrudTurma = () => {
 
     const listar = () => {
 
-        fetch('http://localhost:56515/api/Turma')
+        fetch(url + '/Turma')
             .then(response => response.json())
             .then(data => {
                 setTurmas(data.data)
@@ -31,7 +32,7 @@ const CrudTurma = () => {
     const editar = (event) => {
         event.preventDefault();
 
-        fetch('http://localhost:56515/api/Turma' + '/' + event.target.value,{
+        fetch(url + '/Turma' + '/' + event.target.value,{
             method : 'GET'
         })
         .then(response => response.json())
@@ -50,8 +51,11 @@ const CrudTurma = () => {
     const remover = (event) => {
         event.preventDefault();
 
-        fetch('http://localhost:56515/api/Turma' + '/' + event.target.value, {
-            method : 'DELETE'
+        fetch(url + '/Turma' + '/' + event.target.value, {
+            method : 'DELETE',
+            headers : {
+                'authorization' : 'Bearer ' + localStorage.getItem('token')
+            }
         })
             .then(response => response.json())
             .then(data => {
@@ -66,19 +70,20 @@ const CrudTurma = () => {
     const salvar = (event) => {
         event.preventDefault();
 
-        const turmass = {
-            IdTurma : idTurma,
-            Descricao : descricao,
-            IdCurso : idCurso,
-            AlunoTurma : alunoTurma,
-            ProfessorTurma : professorTurma
+        const turmas = {
+            idTurma : idTurma,
+            descricao : descricao,
+            idCurso : idCurso,
+            alunoTurma : alunoTurma,
+            professorTurma : professorTurma
         }
 
         let method = (idTurma === '' ? 'POST' : 'PUT')
-        let urlRequest = (idTurma === '' ? 'http://localhost:56515/api/Turma' : 'http://localhost:56515/api/Turma' + '/' + idTurma);
+        let urlRequest = (idTurma === '' ? url + '/Turma' : url + '/Turma' + '/' + idTurma);
+
         fetch(urlRequest, {
             method : method,
-            body: JSON.stringify(turmass),
+            body: JSON.stringify(turmas),
             headers : {
                 'content-type' : 'application/json'
             }
@@ -110,7 +115,7 @@ const CrudTurma = () => {
 
                     <Form.Group controlId="exampleForm.ControlSelect1">
                         <Form.Label>Selecioe o ID da Turma em que voce deseja alterar algo</Form.Label>
-                        <Form.Control as="select" onChange={event => setIdTurma(parseInt(event.target.value))} >
+                        <Form.Control as="select" value={idTurma} onChange={event => setIdTurma(parseInt(event.target.value))} >
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
@@ -121,12 +126,12 @@ const CrudTurma = () => {
 
                     <Form.Group controlId="formBasicEmail">
                         <Form.Label>Descricao</Form.Label>
-                        <Form.Control type="text" placeholder="Digite aqui a descriçao" onChange={event => setDescricao(event.target.value)} />
+                        <Form.Control type="text" placeholder="Digite aqui a descriçao" value={descricao} onChange={event => setDescricao(event.target.value)} />
                     </Form.Group>
 
                     <Form.Group controlId="exampleForm.ControlSelect1">
                         <Form.Label>IdCurso</Form.Label>
-                        <Form.Control as="select" onChange={event => setIdCurso(parseInt(event.target.value))} >
+                        <Form.Control as="select" value={idCurso} onChange={event => setIdCurso(parseInt(event.target.value))} >
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
@@ -137,7 +142,7 @@ const CrudTurma = () => {
 
                     <Form.Group controlId="exampleForm.ControlSelect1">
                         <Form.Label>AlunoTurma</Form.Label>
-                        <Form.Control as="select" onChange={event => setAlunoTurma(event.target.value)}>
+                        <Form.Control as="select" value={alunoTurma} onChange={event => setAlunoTurma(event.target.value)}>
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
@@ -148,7 +153,7 @@ const CrudTurma = () => {
 
                     <Form.Group controlId="exampleForm.ControlSelect1">
                         <Form.Label>ProfessorTurma</Form.Label>
-                        <Form.Control as="select" onChange={event => setProfessorTurma(event.target.value)} >
+                        <Form.Control as="select" value={professorTurma} onChange={event => setProfessorTurma(event.target.value)} >
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
@@ -157,7 +162,7 @@ const CrudTurma = () => {
                         </Form.Control>
                     </Form.Group>
 
-                    <Button variant="success" type="submit">
+                    <Button variant="success" type="submit" onClick={event => salvar(event)}>
                         Cadastrar
             </Button>
                 </Form>
@@ -183,8 +188,8 @@ const CrudTurma = () => {
                                         <td>{item.alunoTurma}</td>
                                         <td>{item.professorTurma}</td>
                                         <td>
-                                            <button type='button' value={item.id} onClick={this.remover.bind(this)} className='btn btn-danger'>Remover</button>
-                                            <button type='button' value={item.id} onClick={this.editar.bind(this)} className='btn btn-warning'>Editar</button>
+                                            <button type='button' value={item.id} onClick={remover} className='btn btn-danger'>Remover</button>
+                                            <button type='button' value={item.id} onClick={editar} className='btn btn-warning'>Editar</button>
                                         </td>
                                     </tr>
                                 )
