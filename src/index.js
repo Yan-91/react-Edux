@@ -12,6 +12,7 @@ import Objetivos from './pages/objetivo';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Dashboard from './pages/admin/dashboard';
 
 
 const routing = (
@@ -23,6 +24,7 @@ const routing = (
       <Route path='/cadastro' component={Cadastro}/>
       <Route path='/ranking' component={Ranking}/>
       <Route path='/conquistas' component={NaoEncotrada}/>
+      <Route path='/admin/dashboard' component={Dashboard}/>
       <Route path='/objetivos' component={Objetivos}/>
       <Route path='/turmas' component={CrudTurma}/>
     </Switch>

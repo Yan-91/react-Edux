@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useHistory } from "react-router-dom";
+import jwt_decode from "jwt-decode";
 import  HeaderAluno  from '../../components/headeraluno';
 import  FooterAluno  from '../../components/footeraluno';
 import {  Container, Form, Button } from 'react-bootstrap';
@@ -6,6 +8,7 @@ import './index.css';
 
 const Login = () => {
 
+  const history = useHistory();
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
 
@@ -19,14 +22,37 @@ const Login = () => {
         senha : senha
       }),
       headers : {
+        
         'content-type' : 'application/json'
       }
     })
     .then(response => {
-        console.log(response);
-    })
+        if(response.ok === true){
+          return response.json();
+        }
+        
+        alert('Dados Invalidos');
+        
 
-    console.log('${email} - ${senha}');
+    })
+    .then(data =>  {
+
+      localStorage.setItem('token-edux-tarde', data.token);
+      
+      let perfil = jwt_decode(data.token);
+
+     
+
+      if(perfil.role === 'Admin' )
+
+          history.push('/admin/dashboard')
+        else
+        history.push('/Home');
+      history.push('/Home');
+    })
+    .catch(err => console.err(err));
+
+    
   }
     return (
       <div>
