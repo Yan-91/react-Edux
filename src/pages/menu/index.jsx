@@ -14,24 +14,6 @@ const Home = () => {
             <Container>
                 <Carousel>
                     <Carousel.Item>
-                        <Row>
-                        <Col></Col>
-                        <Image rounded
-                            src={foto1} 
-                            alt="First slide"
-                            width={600}
-                            height={300}
-                        />
-                        <Col></Col>
-                        </Row>
-                        <Carousel.Caption>
-                            <h4>Conheça a plataforma Edux</h4>
-                            <Button variant="success">Saiba mais
-                            <Nav.Link href="/saibaMais" ></Nav.Link>
-                            </Button>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
                     <Row>
                         <Col></Col>
                         <Image rounded

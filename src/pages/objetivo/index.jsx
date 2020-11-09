@@ -10,7 +10,7 @@ const Objetivos = () => {
             <HeaderAluno />
                 <Form className='form-signin'>
                 <Form.Group controlId="exampleForm.ControlInput1">
-                    <Form.Label>Email address</Form.Label>
+                    <Form.Label></Form.Label>
                     <Form.Control type="nome" placeholder="name@example.com" />
                 </Form.Group>
                 <Form.Group controlId="exampleForm.ControlTextarea1">
