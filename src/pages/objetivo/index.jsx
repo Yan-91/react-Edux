@@ -5,6 +5,39 @@ import {Container, Form, FormControl, Button, Col, Row, Card} from 'react-bootst
 import './index.css';
 
 const Objetivos = () => {
+
+
+    const [id, setId] = useState(0)
+    const [nome, setNome] = useState('')
+    const [descricao, setDescricao] = useState('')
+
+    const salvar = (event) => {
+        event.preventDefault();
+
+        const objetivo = {
+            nome : nome,
+            descricao : descricao
+        }
+
+        let method = (id === 0 ? 'POST' : 'PUT');
+        let urlRequest = (id === 0 ? '${url}/Objetivo' : '${url}/Objetivo/${id}')
+
+        fetch(urlRequest, {
+            method : method,
+            body : JSON.stringify(objetivo),
+            headers : {
+                'content-type' : 'application/json',
+                'authorization' : 'Bearer ' + localStorage.getItem('token')
+            }
+        })
+        .then(response => response.json())
+        .then(dados => {
+            alert('Objetivo Criado')
+        })
+        .catch(err => console.error(err))
+        console.log('${nome} - ${descricao}')
+    }
+
     return (
         <div>
             <HeaderAluno />
