@@ -44,12 +44,13 @@ const Objetivos = () => {
                 <Form className='form-signin'>
                 <Form.Group controlId="exampleForm.ControlInput1">
                     <Form.Label></Form.Label>
-                    <Form.Control type="nome" placeholder="name@example.com" />
+                    <Form.Control type="nome" placeholder="Nome objetivo" />
                 </Form.Group>
                 <Form.Group controlId="exampleForm.ControlTextarea1">
-                    <Form.Label>Example textarea</Form.Label>
-                    <Form.Control as="descricao" rows={2} />
+                    <Form.Label>Decrição</Form.Label>
+                    <Form.Control as="textarea" rows={2} />
                 </Form.Group>
+                    <Button variant="dark">Salvar</Button>
                 </Form>
             <Container>
             <Row>
