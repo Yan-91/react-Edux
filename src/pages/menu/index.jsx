@@ -2,9 +2,8 @@ import React from 'react';
 import { Carousel, Jumbotron, Container, Row, Col, Image, Card, Button, Nav } from 'react-bootstrap';
 import FooterAluno from '../../components/footeraluno';
 import HeaderAluno from '../../components/headeraluno';
-import foto1 from '../../assets/img/escola.jpg';
-import foto2 from '../../assets/img/objetivos.jpg';
-import foto3 from '../../assets/img/turmas.jpg';
+import foto1 from '../../assets/img/objetivos.jpg';
+import foto2 from '../../assets/img/turmas.jpg';
 
 const Home = () => {
     return(
@@ -14,28 +13,10 @@ const Home = () => {
             <Container>
                 <Carousel>
                     <Carousel.Item>
-                        <Row>
-                        <Col></Col>
-                        <Image rounded
-                            src={foto1} 
-                            alt="First slide"
-                            width={600}
-                            height={300}
-                        />
-                        <Col></Col>
-                        </Row>
-                        <Carousel.Caption>
-                            <h4>Conheça a plataforma Edux</h4>
-                            <Button variant="success">Saiba mais
-                            <Nav.Link href="/saibaMais" ></Nav.Link>
-                            </Button>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
                     <Row>
                         <Col></Col>
                         <Image rounded
-                            src={foto2}
+                            src={foto1}
                             alt="First slide"
                             width={600}
                             height={300}
@@ -53,7 +34,7 @@ const Home = () => {
                     <Row>
                         <Col></Col>
                         <Image rounded
-                            src={foto3}
+                            src={foto2}
                             alt="First slide"
                             width={600}
                             height={300}
