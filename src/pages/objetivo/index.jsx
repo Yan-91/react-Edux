@@ -48,11 +48,7 @@ const Objetivos = () => {
                 </Form.Group>
                 <Form.Group controlId="exampleForm.ControlTextarea1">
                     <Form.Label>Example textarea</Form.Label>
-                    <Form.Control as="descricao" rows={3} />
-                </Form.Group>
-                <Form.Group controlId="exampleForm.ControlInput1">
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control type="nota" placeholder="name@example.com" />
+                    <Form.Control as="descricao" rows={2} />
                 </Form.Group>
                 </Form>
             <Container>
