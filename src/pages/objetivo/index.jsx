@@ -1,4 +1,4 @@
-import React, { useEffect, useStates } from 'react'
+import React, { useEffect, useState } from 'react'
 import FooterAluno from '../../components/footeraluno';
 import HeaderAluno from '../../components/headeraluno';
 import {Container, Form, FormControl, Button, Col, Row, Card} from 'react-bootstrap'
