@@ -1,5 +1,6 @@
 import React from 'react';
-
+import logo from '../../assets/img/logo_branco_2-8.png';
+import './index.css';
 const FooterAluno = () => {
     return (
         <footer id="myFooter">
